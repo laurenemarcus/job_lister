@@ -1,4 +1,4 @@
-<h1>What jobs have you had?</h1>
+<h1>Employment History</h1>
 
 <form action="/success" method="post">
   <label for="employer">Employer</label>
@@ -16,25 +16,39 @@
   <label for="description">Description</label>
   <br>
   <input id="description" name="description" type="text">
-  <br>
-  <br>
+<br>
+<br>
   <button type="submit">Add employer</button>
 </form>
 
-<% @jobs_list.each() do |ejob| %>
-<div class="row">
-  <div class=".col-md-4">
-    <%= ejob.employer() %>
+<div class="contentBox">
+  <div class="column">
+    <h3>Employer</h3>
   </div>
-  <div class=".col-md-4">
-    <%= ejob.title() %>
+<div class="column">
+<h3>Job Title</h3>
   </div>
-  <div class=".col-md-4">
-    <%= ejob.location() %>
+<div class="column">
+<h3>Location</h3>
   </div>
-  <div class=".col-md-4">
-    <%= ejob.description() %>
+<div class="column">
+<h3>Description</h3>
   </div>
 </div>
 
+<% @jobs_list.each() do |ejob| %>
+<div class="contentBox">
+  <div class="column">
+    <%= ejob.employer() %>
+  </div>
+<div class="column">
+  <%= ejob.title() %>
+  </div>
+<div class="column">
+  <%= ejob.location() %>
+  </div>
+<div class="column">
+  <%= ejob.description() %>
+  </div>
+</div>
 <% end %>
