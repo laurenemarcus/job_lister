@@ -1,14 +1,40 @@
-<h1>Where have you been?</h1>
+<h1>What jobs have you had?</h1>
 
-<ul>
-<%@places.each() do |location|%>
-<li><%= location.location() %></li>
-<% end %>
-</ul>
-
-<form action="/results" method="post">
+<form action="/success" method="post">
+  <label for="employer">Employer</label>
+  <br>
+  <input id="employer" name="employer" type="text">
+  <br>
+  <label for="title">Title</label>
+  <br>
+  <input id="title" name="title" type="text">
+  <br>
   <label for="location">Location</label>
+  <br>
   <input id="location" name="location" type="text">
-
-  <button type="submit">Add location</button>
+  <br>
+  <label for="description">Description</label>
+  <br>
+  <input id="description" name="description" type="text">
+  <br>
+  <br>
+  <button type="submit">Add employer</button>
 </form>
+
+<% @jobs_list.each() do |ejob| %>
+<div class="row">
+  <div class=".col-md-4">
+    <%= ejob.employer() %>
+  </div>
+  <div class=".col-md-4">
+    <%= ejob.title() %>
+  </div>
+  <div class=".col-md-4">
+    <%= ejob.location() %>
+  </div>
+  <div class=".col-md-4">
+    <%= ejob.description() %>
+  </div>
+</div>
+
+<% end %>

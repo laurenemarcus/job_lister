@@ -1,16 +1,20 @@
 require("sinatra")
 require("sinatra/reloader")
 also_reload("lib/**/*.rb")
-require("./lib/places")
+require("./lib/jobs")
 
 get("/") do
-  @places = Places.all()
+  @jobs_list = Job.all()
   erb(:index)
 end
 
-post("/results") do
+post("/success") do
+  employer = params.fetch("employer")
+  title = params.fetch("title")
   location = params.fetch("location")
-  places = Places.new(location)
-  places.save()
-  erb(:results)
+  description = params.fetch("description")
+
+  new_employer = Job.new(employer, title, location, description)
+  new_employer.save()
+  erb(:success)
 end
