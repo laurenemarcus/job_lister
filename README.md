@@ -8,6 +8,8 @@ REQUIREMENTS
 ------------
 Ruby v 2.2.0
 
+Google Chrome Version 40.0.2214.111
+
 
 INSTALLATION
 ------------
