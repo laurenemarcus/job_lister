@@ -2,6 +2,8 @@ INTRODUCTION
 ------------
 The Places You've Been web app displays the locations you've travelled to.
 
+This app demonstrates usage of Ruby, BDD, and RSpec, and Sinatra with a focus on making class methods and class variables and updating the server with POST requests.
+
 REQUIREMENTS
 ------------
 Ruby v 2.2.0
