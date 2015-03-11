@@ -9,14 +9,29 @@ Ruby v 2.2.0
 
 INSTALLATION
 ------------
-Run the following command to install bundle:
-  gem install bundle
+Run the following command to install bundler:
+
+  `$ gem install bundle`
 
 Run the following command to install all required gems:
-  bundle
 
-Run the following command to install rspec:
-  gem install rspec
+  `$ bundle`
+
+Run the following command to install RSpec:
+
+  `$ gem install rspec`
+
+Run the following command to run RSpec:
+
+  `$ rspec`
+
+Run the following command to start the Sinatra server:
+
+  `$ ruby app.rb`
+
+Go to the following site in Chrome to launch the app:
+
+  `localhost:4567`
 
 KNOWN BUGS
 ---------
@@ -34,7 +49,7 @@ chris@joywebb.com
 LICENSE
 -------
 
-Copyright (c) 2015 Lauren Marcus
+Copyright (c) 2015 Lauren Marcus & Christopher Joy-Webb
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
